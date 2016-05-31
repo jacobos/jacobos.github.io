@@ -1,4 +1,4 @@
-# Landing page - [based on](http://startbootstrap.com/template-overviews/agency/)
+# Landing page - based on [bootstrap agency](http://startbootstrap.com/template-overviews/agency/)
 
 my langing page for the other two projects [dwec](http://jacobos.github.io/dwec/) and [sistemas](http://jacobos.github.io/dwec/)
 
