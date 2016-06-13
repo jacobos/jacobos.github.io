@@ -7,7 +7,7 @@
 	sudo chown -R alumno_solvam /home/alumno_solvam/Alice3
 
 	sudo mv /home/alumno/Android /home/alumno_solvam/.
-	sudo chown -R alumno_solvam /home/alumno_solvamAndroid/
+	sudo chown -R alumno_solvam /home/alumno_solvam/Android/
 
 	sudo mv /home/alumno/android-studio/ /home/alumno_solvam/.
 	sudo chown -R alumno_solvam /home/alumno_solvam/android-studio
