@@ -28,6 +28,13 @@
 	sudo chown -R alumno_solvam /var/www/html/alumno_solvam/
 
 	cd
+	#actualizamos chrome
+	#si es de 64 bits
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo dpkg -i google-chrome*.deb
+	sudo apt-get install -f
+
+	
 	wget https://github.com/atom/atom/releases/download/v1.8.0/atom-amd64.deb
 	sudo dpkg -i atom-amd64.deb
 	wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
