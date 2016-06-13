@@ -29,3 +29,12 @@
 	sudo dpkg -i atom-amd64.deb
 	wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 	sudo dpkg -i gitkraken-amd64.deb
+
+
+#alumno_solvam
+	cd /home/alumno_solvam
+	echo "disable.android.first.run=true" >> android-studio/bin/idea.properties	
+	cd /home/alumno_solvam/.config/VirtualBox
+	grep -rl 'alumno' ./ | xargs sed -i 's/alumno/alumno_solvam/g'
+	apm stars --user jacobos --install
+
