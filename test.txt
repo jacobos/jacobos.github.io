@@ -1,5 +1,7 @@
 #solvam
+# esta linea por separado, el resto del usuario solvam se puede hacer de una, copy+paste en la terminal
 	sudo adduser alumno_solvam
+# el resto sigue	
 	sudo mv /home/alumno/Alice3/ /home/alumno_solvam/.
 
 	sudo chown -R alumno_solvam /home/alumno_solvam/Alice3
@@ -26,6 +28,7 @@
 
 
 #alumno_solvam
+# copy + paste en la terminal
 	echo "disable.android.first.run=true" >> /home/alumno_solvam/android-studio/bin/idea.properties	
 	cd /home/alumno_solvam/.config/VirtualBox
 	grep -rl 'alumno' ./ | xargs sed -i 's/alumno/alumno_solvam/g'
