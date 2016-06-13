@@ -1,0 +1,31 @@
+#solvam
+	sudo adduser alumno_solvam
+	sudo mv /home/alumno/Alice3/ /home/alumno_solvam/.
+
+	cd/home/alumno_solvam
+	sudo chown -R alumno_solvam Alice3
+
+	sudo mv /home/alumno/Android /home/alumno_solvam/.
+	cd /home/alumno_solvam
+	sudo chown -R alumno_solvam Android/
+
+	sudo mv /home/alumno/android-studio/ /home/alumno_solvam/.
+	cd /home/alumno_solvam
+	sudo chown -R alumno_solvam android-studio/
+
+	cd /home/alumno_solvam
+	sudo mv /home/alumno/VirtualBox\ VMs .
+	sudo chown -R alumno_solvam  VirtualBox\ VMs
+
+	cd /home/alumno_solvam/.config/
+	sudo mv /home/alumno/.config/VirtualBox .
+	sudo chown -R alumno_solvam  VirtualBox
+
+	cd /home/
+	sudo chown -R alumno_solvam VirtualBox
+
+	cd
+	wget https://github.com/atom/atom/releases/download/v1.8.0/atom-amd64.deb
+	sudo dpkg -i atom-amd64.deb
+	wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+	sudo dpkg -i gitkraken-amd64.deb
