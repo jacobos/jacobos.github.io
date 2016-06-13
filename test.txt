@@ -1,4 +1,4 @@
-#solvam
+# desde el usuario solvam
 # esta linea por separado, el resto del usuario solvam se puede hacer de una, copy+paste en la terminal
 	sudo adduser alumno_solvam
 # el resto sigue	
@@ -27,7 +27,7 @@
 	sudo dpkg -i gitkraken-amd64.deb
 
 
-#alumno_solvam
+# desde el usuario alumno_solvam
 # copy + paste en la terminal
 	echo "disable.android.first.run=true" >> /home/alumno_solvam/android-studio/bin/idea.properties	
 	cd /home/alumno_solvam/.config/VirtualBox
