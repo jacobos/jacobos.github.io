@@ -1,7 +1,19 @@
 # desde el usuario solvam
 # esta linea por separado, el resto del usuario solvam se puede hacer de una, copy+paste en la terminal
 	sudo adduser alumno_solvam
-# el resto sigue	
+	
+# si quires actualizar chrome
+	cd
+	#source http://www.infoworld.com/article/2695753/install-google-s-chrome-browser-in-linux-mint-17.html
+	#actualizamos chrome
+	# para 64
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo dpkg -i google-chrome-stable_current_amd64.deb
+	# para 32
+	# wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+	sudo dpkg -i google-chrome-stable_current_i386.deb
+
+# el resto para el usuario solvam sigue	
 	sudo mv /home/alumno/Alice3/ /home/alumno_solvam/.
 
 	sudo chown -R alumno_solvam /home/alumno_solvam/Alice3
@@ -28,14 +40,6 @@
 	sudo chown -R alumno_solvam /var/www/html/alumno_solvam/
 
 	cd
-
-	#source http://tecadmin.net/install-google-chrome-in-ubuntu/
-	#actualizamos chrome
-	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-	sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-	sudo apt-get update
-	sudo apt-get install google-chrome-stable
-	
 	wget https://github.com/atom/atom/releases/download/v1.8.0/atom-amd64.deb
 	sudo dpkg -i atom-amd64.deb
 	wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
