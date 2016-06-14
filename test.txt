@@ -2,17 +2,6 @@
 # esta linea por separado, el resto del usuario solvam se puede hacer de una, copy+paste en la terminal
 	sudo adduser alumno_solvam
 	
-# si quires actualizar chrome
-	cd
-	#source http://www.infoworld.com/article/2695753/install-google-s-chrome-browser-in-linux-mint-17.html
-	#actualizamos chrome
-	# para 64
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-	sudo dpkg -i google-chrome-stable_current_amd64.deb
-	# para 32
-	# wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
-	sudo dpkg -i google-chrome-stable_current_i386.deb
-
 # el resto para el usuario solvam sigue	
 	sudo mv /home/alumno/Alice3/ /home/alumno_solvam/.
 
@@ -59,3 +48,12 @@
 # y si queermemos los paquetes de atom del usuario jacobos hacer el 'apm stars --user jacobos --install'
 	sudo tar -cvf /home/android_ecl_alic.tar /home/alumno_solvam/Alice3/ /home/alumno_solvam/Android/ /home/alumno_solvam/android-studio/ /home/alumno_solvam/eclipse\ EE/ /home/alumno_solvam/.config/VirtualBox/ 
 
+#  cd
+#source http://www.infoworld.com/article/2695753/install-google-s-chrome-browser-in-linux-mint-17.html
+#actualizamos chrome
+# para 64
+#  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#  sudo dpkg -i google-chrome-stable_current_amd64.deb
+# para 32
+# wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+#  sudo dpkg -i google-chrome-stable_current_i386.deb
