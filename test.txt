@@ -57,3 +57,53 @@
 # para 32
 # wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 #  sudo dpkg -i google-chrome-stable_current_i386.deb
+
+
+
+
+
+
+
+# del año pasado (solo como backup, no utilizar)
+# VISOR REMOTO Y CONTROL REMOTO
+    sudo apt-get install vinagre
+    sudo apt-get install php5-cli
+    sudo apt-get install epoptes
+    sudo apt-get install epoptes-client
+
+        para epoptes (control remoto, control de la clase)
+        en el ordenador que controlara (servidor)
+
+        1) (synaptic) instalar epoptes
+        2) (synaptic) instalar epoptes-client (si no no funciona bien)
+        3) sudo gpasswd -a solvam epoptes
+        (añadimos al usuario, será el profesor con usuario alumno en el dia que toque,
+        osea --> sudo gpasswd -a alumno epoptes)
+        4) reiniciar (cerrar sesión) (para que funcione)
+
+        en los ordenadores de los alumnos
+        1) sudo apt-get install epoptes-client
+        2) sudo gedit /etc/default/epoptes-client
+        (poner la ip del profes en server)
+        3) sudo epoptes-client -c
+        4) reiniciar (cerrar sesión)
+        (si cambiamos el ordenador servidor habrá que repetir 2) 3) y 4)
+
+
+# IDIOMAS GIMP Y OFFICE, e INSTALAR EL BASE
+    sudo apt-get install language-pack-gnome-es language-pack-gnome-es-base #idioma para el gimp
+    sudo apt-get install libreoffice-base #instalar base
+    sudo apt-get install -y libreoffice-l10n-es #libreoffice esp
+
+#BAJAR VELOCIDAD DE LA RED
+    sudo apt-get install ethtool
+    # crear archivo /etc/init.d/10Mbs  #bajamos la velocidad de la red
+
+        #!/bin/sh
+        ethtool -s eth0 speed 10 duplex half autoneg off
+
+    sudo chmod +x /etc/init.d/10Mbs
+    cd /etc/init.d
+    sudo update-rc.d 10Mbs defaults
+    /etc/init.d/10Mbs start # ejecutamos el script, si no funciona vamos direcamente a la carpeta y lo lanzamos
+    ethtool eth0 # comprobamos que funciona
