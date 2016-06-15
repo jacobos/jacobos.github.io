@@ -1,0 +1,116 @@
+# desde el usuario solvam
+# esta linea por separado, el resto del usuario solvam se puede hacer de una, copy+paste en la terminal
+	sudo adduser alumno_solvam
+	
+# el resto para el usuario solvam sigue	
+	sudo mv /home/alumno/Alice3/ /home/alumno_solvam/.
+
+	sudo chown -R alumno_solvam /home/alumno_solvam/Alice3
+
+	sudo mv /home/alumno/Android /home/alumno_solvam/.
+	sudo chown -R alumno_solvam /home/alumno_solvam/Android/
+
+	sudo mv /home/alumno/android-studio/ /home/alumno_solvam/.
+	sudo chown -R alumno_solvam /home/alumno_solvam/android-studio
+
+	sudo mv /home/alumno/VirtualBox\ VMs /home/alumno_solvam/.
+	sudo chown -R alumno_solvam  /home/alumno_solvam/VirtualBox\ VMs
+
+	sudo mv /home/alumno/.config/VirtualBox /home/alumno_solvam/.config/.
+	sudo chown -R alumno_solvam  /home/alumno_solvam/.config/VirtualBox
+
+	sudo mv /home/alumno/VirtualBox /home/.
+
+	sudo chown -R alumno_solvam /home/VirtualBox
+	sudo chown -R alumno_solvam /home/virtualBox
+	sudo chown -R alumno_solvam /home/virtualbox
+	
+	sudo mv /home/alumno/eclipse\ EE/ /home/alumno_solvam
+	sudo chown -R alumno_solvam /home/alumno_solvam/eclipse\ EE/
+	
+	sudo rm -rf /var/www/html/*
+	sudo mkdir /var/www/html/alumno_solvam
+	sudo chown -R alumno_solvam /var/www/html/alumno_solvam/
+
+	cd
+	wget https://github.com/atom/atom/releases/download/v1.8.0/atom-amd64.deb
+	sudo dpkg -i atom-amd64.deb
+	wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+	sudo dpkg -i gitkraken-amd64.deb
+
+
+# desde el usuario alumno_solvam
+# copy + paste en la terminal
+	echo "disable.android.first.run=true" >> /home/alumno_solvam/android-studio/bin/idea.properties	
+	cd /home/alumno_solvam/.config/VirtualBox
+	grep -rl 'alumno' ./ | xargs sed -i 's/alumno/alumno_solvam/g'
+	cd /home/alumno_solvam/VirtualBox\ VMs/
+	grep -rl 'alumno\/' ./ | xargs sed -i 's/alumno\//alumno_solvam\//g'
+
+	apm stars --user jacobos --install
+
+# solvam (despuews de hacer lo anterior)
+# copia de seguridad en /home, la siguiente vez solamente habrá que borrar y añadir el usuario alumno_solvam
+# y mirar que en /var/www/html haya una carpeta con permisos para el usuario
+# y si queermemos los paquetes de atom del usuario jacobos hacer el 'apm stars --user jacobos --install'
+	sudo tar -cvf /home/android_ecl_alic.tar /home/alumno_solvam/Alice3/ /home/alumno_solvam/Android/ /home/alumno_solvam/android-studio/ /home/alumno_solvam/eclipse\ EE/ /home/alumno_solvam/.config/VirtualBox/ 
+
+#  cd
+#source http://www.infoworld.com/article/2695753/install-google-s-chrome-browser-in-linux-mint-17.html
+#actualizamos chrome
+# para 64
+#  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#  sudo dpkg -i google-chrome-stable_current_amd64.deb
+# para 32
+# wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+#  sudo dpkg -i google-chrome-stable_current_i386.deb
+
+
+
+
+
+
+
+# del año pasado (solo como backup, no utilizar)
+# VISOR REMOTO Y CONTROL REMOTO
+    sudo apt-get install vinagre
+    sudo apt-get install php5-cli
+    sudo apt-get install epoptes
+    sudo apt-get install epoptes-client
+
+        para epoptes (control remoto, control de la clase)
+        en el ordenador que controlara (servidor)
+
+        1) (synaptic) instalar epoptes
+        2) (synaptic) instalar epoptes-client (si no no funciona bien)
+        3) sudo gpasswd -a solvam epoptes
+        (añadimos al usuario, será el profesor con usuario alumno en el dia que toque,
+        osea --> sudo gpasswd -a alumno epoptes)
+        4) reiniciar (cerrar sesión) (para que funcione)
+
+        en los ordenadores de los alumnos
+        1) sudo apt-get install epoptes-client
+        2) sudo gedit /etc/default/epoptes-client
+        (poner la ip del profes en server)
+        3) sudo epoptes-client -c
+        4) reiniciar (cerrar sesión)
+        (si cambiamos el ordenador servidor habrá que repetir 2) 3) y 4)
+
+
+# IDIOMAS GIMP Y OFFICE, e INSTALAR EL BASE
+    sudo apt-get install language-pack-gnome-es language-pack-gnome-es-base #idioma para el gimp
+    sudo apt-get install libreoffice-base #instalar base
+    sudo apt-get install -y libreoffice-l10n-es #libreoffice esp
+
+#BAJAR VELOCIDAD DE LA RED
+    sudo apt-get install ethtool
+    # crear archivo /etc/init.d/10Mbs  #bajamos la velocidad de la red
+
+        #!/bin/sh
+        ethtool -s eth0 speed 10 duplex half autoneg off
+
+    sudo chmod +x /etc/init.d/10Mbs
+    cd /etc/init.d
+    sudo update-rc.d 10Mbs defaults
+    /etc/init.d/10Mbs start # ejecutamos el script, si no funciona vamos direcamente a la carpeta y lo lanzamos
+    ethtool eth0 # comprobamos que funciona
