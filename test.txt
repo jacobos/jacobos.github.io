@@ -112,3 +112,17 @@
     sudo update-rc.d 10Mbs defaults
     /etc/init.d/10Mbs start # ejecutamos el script, si no funciona vamos direcamente a la carpeta y lo lanzamos
     ethtool eth0 # comprobamos que funciona
+
+#para añadir a alumno_solvam al grupo de superusuarios
+#To create a new user with admin privileges in Ubuntu 12.04 and later:
+
+adduser <username> sudo
+#In Ubuntu 11.10 and earlier, use this instead:
+
+adduser <username> admin
+#To modify a existing user (12.04 and later):
+
+sudo usermod -aG sudo <username>
+#(Or for 11.10 and earlier: sudo usermod -aG admin <username>)
+
+-#a stands for append whereas -G stands for groups. With the -a and -G flags as shown above, the sudo (or admin) group will be added to the list of groups of which the user is a member.
