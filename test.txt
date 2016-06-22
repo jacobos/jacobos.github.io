@@ -41,7 +41,7 @@
 # copy + paste en la terminal
 	echo "disable.android.first.run=true" >> /home/alumno_solvam/android-studio/bin/idea.properties	
 	cd /home/alumno_solvam/.config/VirtualBox
-	grep -rl 'alumno' ./ | xargs sed -i 's/alumno/alumno_solvam/g'
+	grep -rl 'alumno\/' ./ | xargs sed -i 's/alumno\//alumno_solvam\//g'
 	cd /home/alumno_solvam/VirtualBox\ VMs
 	grep -rl 'alumno\/' ./ | xargs sed -i 's/alumno\//alumno_solvam\//g'
 
