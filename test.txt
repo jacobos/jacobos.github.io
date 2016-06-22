@@ -52,9 +52,9 @@
 	cd /usr/share/pyshared/openshot/blender/scripts/
 	sudo cp -f dissolve.py dissolve-back.py
 	
-	grep  'remove_disconnected_pieces' dissolve.py | xargs sed -i 's/remove_disconnected_pieces/use_remove_disconnected/g'
+	sudo sed -i 's/remove_disconnected_pieces/use_remove_disconnected/g' dissolve.py
 
-	grep  'settings.adaptive_subframes ' dissolve.py | xargs sed -i 's/settings.adaptive_subframes/settings.use_adaptive_subframes/g'
+	sudo sed -i 's/settings.adaptive_subframes/settings.use_adaptive_subframes/g' dissolve.py
 
 # desde el usuario alumno_solvam
 # copy + paste en la terminal
@@ -166,9 +166,10 @@ sudo usermod -aG sudo <username>
 	cd /usr/share/pyshared/openshot/blender/scripts/
 	sudo cp -f dissolve.py dissolve-back.py
 	
-	grep  'remove_disconnected_pieces' dissolve.py | xargs sed -i 's/remove_disconnected_pieces/use_remove_disconnected/g'
+	sudo sed -i 's/remove_disconnected_pieces/use_remove_disconnected/g' dissolve.py
 
-	grep  'settings.adaptive_subframes ' dissolve.py | xargs sed -i 's/settings.adaptive_subframes/settings.use_adaptive_subframes/g'
+	sudo sed -i 's/settings.adaptive_subframes/settings.use_adaptive_subframes/g' dissolve.py
+
 	
 	
 #sudo gedit /usr/share/pyshared/openshot/blender/scripts/dissolve.py
