@@ -126,3 +126,37 @@ sudo usermod -aG sudo <username>
 #(Or for 11.10 and earlier: sudo usermod -aG admin <username>)
 
 -#a stands for append whereas -G stands for groups. With the -a and -G flags as shown above, the sudo (or admin) group will be added to the list of groups of which the user is a member.
+
+
+
+
+# isabel, como solvam
+	sudo echo hola
+	# y despues ya lo que sigue todo junto
+	sudo apt-get update
+	
+	sudo apt-get install openshot
+	
+	sudo apt-get install frei0r-plugins
+	
+	sudo apt-get install blender
+	
+	
+	#solucion blendser/Ubuntu/Mint 
+	
+	cd /usr/share/pyshared/openshot/blender/scripts/
+	sudo cp -f dissolve.py dissolve-back.py
+	
+	grep  'remove_disconnected_pieces' dissolve.py | xargs sed -i 's/remove_disconnected_pieces/use_remove_disconnected/g'
+
+	grep  'settings.adaptive_subframes ' dissolve.py | xargs sed -i 's/settings.adaptive_subframes/settings.use_adaptive_subframes/g'
+	
+	
+#sudo gedit /usr/share/pyshared/openshot/blender/scripts/dissolve.py
+#ActiveObjectText.modifiers['Remesh'].remove_disconnected_pieces=False
+#Cambiar a:
+#ActiveObjectText.modifiers['Remesh'].use_remove_disconnected = False
+#DATA HOSTED WITH ♥ BY PASTEBIN.COM - DOWNLOAD RAW - SEE ORIGINAL
+#ActiveObjectText.particle_systems['ParticleSystem'].settings.adaptive_subframes = True
+#Cambiar a:
+#ActiveObjectText.particle_systems['ParticleSystem'].settings.use_adaptive_subframes = True	
