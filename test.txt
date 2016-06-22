@@ -40,11 +40,11 @@
 # isabel, como solvam
 	sudo apt-get update
 	
-	sudo apt-get install openshot
+	sudo apt-get install  -y openshot
 	
-	sudo apt-get install frei0r-plugins
+	sudo apt-get install  -y frei0r-plugins
 	
-	sudo apt-get install blender
+	sudo apt-get install  -y blender
 	
 	
 	#solucion blendser/Ubuntu/Mint 
@@ -154,11 +154,11 @@ sudo usermod -aG sudo <username>
 	# y despues ya lo que sigue todo junto
 	sudo apt-get update
 	
-	sudo apt-get install openshot
+	sudo apt-get install -y openshot
 	
-	sudo apt-get install frei0r-plugins
+	sudo apt-get install -y frei0r-plugins
 	
-	sudo apt-get install blender
+	sudo apt-get install -y blender
 	
 	
 	#solucion blendser/Ubuntu/Mint 
