@@ -186,7 +186,7 @@ sudo usermod -aG sudo <username>
 # imagenes 
 	# Intenso
 		2015-emachineE625
-		2016-02-18-16-img-e720
+		2016-02-18-16-img-e720 (es win)
 		acer-5635zg-linuxMint-2015
 		acerplateado2015
 		Alice3_unix_Offline_3_2_5_0_0.sh
