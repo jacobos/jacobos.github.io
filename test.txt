@@ -180,3 +180,36 @@ sudo usermod -aG sudo <username>
 #ActiveObjectText.particle_systems['ParticleSystem'].settings.adaptive_subframes = True
 #Cambiar a:
 #ActiveObjectText.particle_systems['ParticleSystem'].settings.use_adaptive_subframes = True	
+
+
+
+# imagenes 
+	# Intenso
+		2015-emachineE625
+		2016-02-18-16-img-e720
+		acer-5635zg-linuxMint-2015
+		acerplateado2015
+		Alice3_unix_Offline_3_2_5_0_0.sh
+		android-studio-ide-141.1903250-linux.zip
+		clonezilla-live-2.4.2-10-amd64.iso
+		linuxmint-17.1-cinnamon-64bit.iso
+		msi-LinuxMint-2015
+		pavilion-g6-LinuxMint
+		windows2008server.iso
+		windtopGa
+		windtopGestion
+	# toshiba sin marca encima
+		2013-09-13-13-acerp253e
+		2015-HP620
+		acerplateado2015
+		cubogestion2014
+		DELLGESTIOON
+		emachinesE520LinuxMint
+		maquinasVirtualBox
+		msi-LinuxMint-2015
+		OrdenadorSalaP
+		Software
+		Tacens-LinuxMint
+		VirtualBox
+		trabPegati
+
