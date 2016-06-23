@@ -213,3 +213,27 @@ sudo usermod -aG sudo <username>
 		VirtualBox
 		trabPegati
 
+
+
+# ECLIPSE NEON 64 # primero 
+sudo mv eclipse-java-neon-R-linux-gtk-x86_64.tar.gz /opt/
+cd /opt
+sudo tar -xvf eclipse-java-neon-R-linux-gtk-x86_64.tar.gz
+sudo chown -R root:root eclipse
+sudo chmod -R +r eclipse
+sudo cp eclipse/icon.xpm /usr/share/pixmaps/eclipse.xpm
+sudo nano /usr/share/applications/eclipse.desktop
+	[Desktop Entry]
+	Encoding=UTF-8
+	Name=Eclipse
+	Comment=Eclipse IDE
+	Exec=/opt/eclipse/eclipse
+	Icon=/usr/share/pixmaps/eclipse.xpm
+	Terminal=false
+	Type=Application
+	Categories=GNOME;Application;Development;
+	StartupNotify=true
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get -y update
+sudo apt-get -y install oracle-java8-installer
