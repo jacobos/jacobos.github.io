@@ -242,13 +242,7 @@ sudo echo hola
 
 ########################################## todo este apartado de una vez
 
-sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-get -y update
-sudo apt-get -y install oracle-java8-installer
-
-########################################## todo este apartado de una vez
-
-# esto es para el lanzador de eclipse
+#para eclipse
 sudo cp eclipse/icon.xpm /usr/share/pixmaps/eclipse.xpm
 
 sudo mv eclipse.desktop /usr/share/applications/.
@@ -256,5 +250,8 @@ sudo mv eclipse.desktop /usr/share/applications/.
 sudo chown root:root /usr/share/pixmaps/eclipse.xpm
 sudo chown root:root /usr/share/applications/eclipse.desktop
 
-
+#para instalar el java
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo apt-get -y update
+sudo apt-get -y install oracle-java8-installer
 
