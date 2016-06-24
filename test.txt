@@ -215,27 +215,45 @@ sudo usermod -aG sudo <username>
 
 
 
-# ECLIPSE NEON 64 # primero 
+# ECLIPSE NEON 64 # primero como alumno_solvam
+
+########################################## primero desde alumno_solvam
+cd
+wget http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/neon/R/eclipse-java-neon-R-linux-gtk-x86_64.tar.gz
+tar xvf eclipse-java-neon-R-linux-gtk-x86_64.tar.gz
+
+echo "[Desktop Entry]" >  eclipse.desktop
+echo "Encoding=UTF-8" >>  eclipse.desktop
+echo "Name=Eclipse" >>  eclipse.desktop
+echo "Comment=Eclipse IDE" >>  eclipse.desktop
+echo "Exec=/home/alumno_solvam/eclipse/eclipse" >>  eclipse.desktop
+echo "Terminal=false" >>  eclipse.desktop
+echo "Icon[en_US]=/usr/share/pixmaps/eclipse.xpm  # location of icon file." >>  eclipse.desktop
+echo "Type=Application" >>  eclipse.desktop
+echo "Categories=GNOME;Application;Development;" >>  eclipse.desktop
+echo "StartupNotify=true" >>  eclipse.desktop
+
+
+su solvam
+
+########################################## line a ejecutar para tener al usuario activado con pass
 
 sudo echo hola
+
+########################################## todo de una otra vez
+
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get -y update
 sudo apt-get -y install oracle-java8-installer
-cd
-wget http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/neon/R/eclipse-java-neon-R-linux-gtk-x86_64.tar.gz
-tar xvf eclipse-java-neon-R-linux-gtk-x86_64.tar.gz 
+
+
+# esto es para el lanzador de eclipse
 sudo cp eclipse/icon.xpm /usr/share/pixmaps/eclipse.xpm
-sudo echo "[Desktop Entry]" >  eclipse.desktop
-sudo echo "Encoding=UTF-8" >>  eclipse.desktop
-sudo echo "Name=Eclipse" >>  eclipse.desktop
-sudo echo "Comment=Eclipse IDE" >>  eclipse.desktop
-sudo echo "Exec=/home/alumno_solvam/eclispe/eclipse" >>  eclipse.desktop
-sudo echo "Terminal=false" >>  eclipse.desktop
-sudo echo "Icon[en_US]=/usr/share/pixmaps/eclipse.xpm  # location of icon file." >>  eclipse.desktop
-sudo echo "Type=Application" >>  /usr/share/applications/eclipse.desktop
-sudo echo "Categories=GNOME;Application;Development;" >>  eclipse.desktop
-sudo echo "StartupNotify=true" >>  eclipse.desktop
+
 sudo mv eclipse.desktop /usr/share/applications/.
+
+sudo chown root:root /usr/share/pixmaps/eclipse.xpm
+sudo chown root:root /usr/share/applications/eclipse.desktop
 
 
 
