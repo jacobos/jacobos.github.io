@@ -47,11 +47,17 @@
 	sudo apt-get update
 	
 	sudo apt-get install  -y openshot
-	
+#######################
+#          3          #
+#######################	
 	sudo apt-get install  -y frei0r-plugins
-	
+#######################
+#          4          #
+#######################	
 	sudo apt-get install  -y blender
-	
+#######################
+#          5          #
+#######################	
 	#solucion blender/Ubuntu/Mint 
 	
 	cd /usr/share/pyshared/openshot/blender/scripts/
@@ -70,7 +76,7 @@
 # desde el usuario alumno_solvam
 # copy + paste en la terminal
 #######################
-#          3          #
+#          6          #
 #######################
 
 	echo "disable.android.first.run=true" >> /home/alumno_solvam/android-studio/bin/idea.properties	
@@ -103,7 +109,7 @@
   su solvam
 
 #######################
-#          4          #
+#          7          #
 #######################
 ########################################## line a ejecutar para tener al usuario activado con pass
   
@@ -111,7 +117,7 @@
 
 ########################################## todo este apartado de una vez
 #######################
-#          5          #
+#          8          #
 #######################
 
 #para eclipse
