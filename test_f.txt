@@ -1,14 +1,14 @@
 # desde el usuario solvam
-#######################
-#          1          #
-#######################
+####################################
+#          1       solvam          #
+####################################
 # esta linea por separado, el resto del usuario solvam se puede hacer de una, copy+paste en la terminal
 	sudo adduser alumno_solvam
 	
 # el resto para el usuario solvam sigue	
-#######################
-#          2          #
-#######################
+####################################
+#          2       solvam          #
+####################################
 	sudo mv /home/alumno/Alice3/ /home/alumno_solvam/.
 
 	sudo chown -R alumno_solvam /home/alumno_solvam/Alice3
@@ -47,17 +47,17 @@
 	sudo apt-get update
 	
 	sudo apt-get install  -y openshot
-#######################
-#          3          #
-#######################	
+####################################
+#          3       solvam          #
+####################################
 	sudo apt-get install  -y frei0r-plugins
-#######################
-#          4          #
-#######################	
+####################################
+#          4       solvam          #
+####################################
 	sudo apt-get install  -y blender
-#######################
-#          5          #
-#######################	
+####################################
+#          5       solvam          #
+####################################
 	#solucion blender/Ubuntu/Mint 
 	
 	cd /usr/share/pyshared/openshot/blender/scripts/
@@ -75,9 +75,9 @@
 	
 # desde el usuario alumno_solvam
 # copy + paste en la terminal
-#######################
-#          6          #
-#######################
+####################################
+#          6       alumno_solvam   #
+####################################
 
 	echo "disable.android.first.run=true" >> /home/alumno_solvam/android-studio/bin/idea.properties	
 	cd /home/alumno_solvam/.config/VirtualBox
@@ -108,17 +108,17 @@
   
   su solvam
 
-#######################
-#          7          #
-#######################
+####################################
+#          7       solvam          #
+####################################
 ########################################## line a ejecutar para tener al usuario activado con pass
   
   sudo echo hola
 
 ########################################## todo este apartado de una vez
-#######################
-#          8          #
-#######################
+####################################
+#          8       solvam          #
+####################################
 
 #para eclipse
   sudo cp eclipse/icon.xpm /usr/share/pixmaps/eclipse.xpm
