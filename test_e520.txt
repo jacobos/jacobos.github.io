@@ -24,6 +24,7 @@
 	sudo chown -R alumno_solvam /home/VirtualBox
 	sudo chown -R alumno_solvam /home/virtualBox
 	sudo chown -R alumno_solvam /home/virtualbox
+	sudo chmod -R 777 /home/VirtualBox
 	
 	sudo mv /home/alumno/eclipse/ /home/alumno_solvam/eclipse\ EE
 	sudo chown -R alumno_solvam /home/alumno_solvam/eclipse\ EE/
