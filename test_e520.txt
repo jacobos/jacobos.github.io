@@ -3,6 +3,8 @@
 	sudo adduser alumno_solvam
 	
 # el resto para el usuario solvam sigue	
+	sudo usermod -aG dialout alumno_solvam  # permisos para arduino, sino no reconoce el usb
+
 	sudo mv /home/alumno/Alice3/ /home/alumno_solvam/.
 
 	sudo chown -R alumno_solvam /home/alumno_solvam/Alice3
