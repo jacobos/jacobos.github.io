@@ -9,6 +9,8 @@
 ####################################
 #          2       solvam          #
 ####################################
+	sudo usermod -aG dialout alumno_solvam  # permisos para arduino, sino no reconoce el usb
+
 	sudo mv /home/alumno/Alice3/ /home/alumno_solvam/.
 
 	sudo chown -R alumno_solvam /home/alumno_solvam/Alice3
