@@ -117,10 +117,10 @@
   
   sudo echo hola
 
-########################################## todo este apartado de una vez
 ####################################
 #          8       solvam          #
 ####################################
+########################################## todo este apartado de una vez
 
 #para eclipse
   sudo cp eclipse/icon.xpm /usr/share/pixmaps/eclipse.xpm
@@ -134,8 +134,13 @@
 ######### copia de seguridad de android, alice, el config de virtualbox y eclipse ########
 	sudo tar -cvf /home/android_ecl_alic.tar /home/alumno_solvam/Alice3/ /home/alumno_solvam/Android/ /home/alumno_solvam/android-studio/ /home/alumno_solvam/eclipse/ /home/alumno_solvam/.config/VirtualBox/ 
 
-
-
+############################################
+#     9 	solvam                     #
+#     falta borrar al usuario              #
+#     para borrar el usuario alumno seria  #
+############################################
+	userdel -r alumno
+	
 #######################
 #         FIN         #
 #######################
